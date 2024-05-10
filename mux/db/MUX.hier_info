@@ -1,0 +1,15 @@
+|MUX
+codigo0 => Mux0.IN0
+codigo0 => Mux0.IN1
+codigo0 => Mux0.IN2
+codigo0 => Mux0.IN3
+codigo1 => Mux0.IN4
+codigo2 => Mux0.IN5
+codigo3 => Mux0.IN6
+codigo4 => Mux0.IN7
+control[0] => Mux0.IN10
+control[1] => Mux0.IN9
+control[2] => Mux0.IN8
+salida << Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

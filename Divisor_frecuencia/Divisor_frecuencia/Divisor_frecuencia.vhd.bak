@@ -1,0 +1,40 @@
+library ieee
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+entity Divisor_frecuencia is
+	port
+	(
+		-- Input ports
+		CLK	: in  std_logic;
+
+		-- Output ports
+		out1, out2	: buffer std_logic
+	);
+end Divisor_frecuencia;
+
+
+architecture arch_Divisor_frecuencia of Divisor_frecuencia is
+
+	signal count1 : integer range 0 to 7;
+
+begin
+
+	Divisor_frecuencia : process(CLK) is
+		variable count2 : integer range 0 to 7;
+	begin
+		if (CLK'EVENT and CLK='1') then
+		count1 <= count1+1;
+		count2 <= count2+1;
+			if(count1 = 2) then
+				out1 <= not out1;
+				count1 <= 0;
+			end if;
+			if(count2 = 3) then
+				out2 <= not out2;
+				count2 := 0;
+			end if;
+		end if;
+	end process;
+
+end arch_Divisor_frecuencia;

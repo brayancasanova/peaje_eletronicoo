@@ -1,0 +1,105 @@
+|peaje_eletronico
+front_sensor => maquina.IN0
+front_sensor => maquina.IN0
+front_sensor => maquina.IN0
+back_sensor => maquina.IN1
+back_sensor => maquina.IN1
+back_sensor => maquina.IN1
+reset => presente~3.DATAIN
+clk => Divisor_frecuencia:divisor.clk
+clk => presente~1.DATAIN
+pagar_dinero[0] => Mux0.IN36
+pagar_dinero[1] => Mux0.IN35
+pagar_dinero[2] => Mux0.IN34
+pagar_dinero[3] => Mux0.IN33
+pagar_dinero[4] => Mux0.IN32
+semaforo_entrada_verde <= semaforo_entrada_verde.DB_MAX_OUTPUT_PORT_TYPE
+semaforo_entrada_rojo <= semaforo_entrada_verde.DB_MAX_OUTPUT_PORT_TYPE
+semaforo_salida_verde <= semaforo_salida_verde.DB_MAX_OUTPUT_PORT_TYPE
+semaforo_salida_rojo <= semaforo_salida_rojo.DB_MAX_OUTPUT_PORT_TYPE
+talanquera_entrada <= talanquera_entrada.DB_MAX_OUTPUT_PORT_TYPE
+talanquera_salida <= talanquera_salida.DB_MAX_OUTPUT_PORT_TYPE
+alarma_ruido <= alarma_ruido.DB_MAX_OUTPUT_PORT_TYPE
+recibo <= recibo.DB_MAX_OUTPUT_PORT_TYPE
+bcd_out[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+bcd_out[1] <= bcd_out[1].DB_MAX_OUTPUT_PORT_TYPE
+bcd_out[2] <= bcd_out[2].DB_MAX_OUTPUT_PORT_TYPE
+bcd_out[3] <= bcd_out[3].DB_MAX_OUTPUT_PORT_TYPE
+bcd_out[4] <= bcd_out[4].DB_MAX_OUTPUT_PORT_TYPE
+bcd_out[5] <= bcd_out[5].DB_MAX_OUTPUT_PORT_TYPE
+bcd_out[6] <= bcd_out[6].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|peaje_eletronico|bcd:U1
+IA => ABCDEFG[6].DATAIN
+IA => ABCDEFG[5].DATAIN
+IA => ABCDEFG[2].DATAIN
+IA => ABCDEFG[1].DATAIN
+IA => ABCDEFG[0].DATAIN
+ABCDEFG[0] <= IA.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[1] <= IA.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[2] <= IA.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[3] <= <VCC>
+ABCDEFG[4] <= <VCC>
+ABCDEFG[5] <= IA.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[6] <= IA.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|peaje_eletronico|Divisor_frecuencia:divisor
+clk => out2~reg0.CLK
+clk => out1~reg0.CLK
+clk => count2[0].CLK
+clk => count2[1].CLK
+clk => count2[2].CLK
+clk => count2[3].CLK
+clk => count2[4].CLK
+clk => count2[5].CLK
+clk => count2[6].CLK
+clk => count2[7].CLK
+clk => count2[8].CLK
+clk => count2[9].CLK
+clk => count2[10].CLK
+clk => count2[11].CLK
+clk => count2[12].CLK
+clk => count2[13].CLK
+clk => count2[14].CLK
+clk => count2[15].CLK
+clk => count2[16].CLK
+clk => count2[17].CLK
+clk => count2[18].CLK
+clk => count2[19].CLK
+clk => count2[20].CLK
+clk => count2[21].CLK
+clk => count2[22].CLK
+clk => count2[23].CLK
+clk => count2[24].CLK
+clk => count1[0].CLK
+clk => count1[1].CLK
+clk => count1[2].CLK
+clk => count1[3].CLK
+clk => count1[4].CLK
+clk => count1[5].CLK
+clk => count1[6].CLK
+clk => count1[7].CLK
+clk => count1[8].CLK
+clk => count1[9].CLK
+clk => count1[10].CLK
+clk => count1[11].CLK
+clk => count1[12].CLK
+clk => count1[13].CLK
+clk => count1[14].CLK
+clk => count1[15].CLK
+clk => count1[16].CLK
+clk => count1[17].CLK
+clk => count1[18].CLK
+clk => count1[19].CLK
+clk => count1[20].CLK
+clk => count1[21].CLK
+clk => count1[22].CLK
+clk => count1[23].CLK
+clk => count1[24].CLK
+clk => count1[25].CLK
+out1 <= out1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out2 <= out2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

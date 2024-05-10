@@ -1,0 +1,85 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Samuel\Desktop\Lab-Quartus\Divisor_frecuencia\simulation\qsim
+vDivisor_frecuencia
+Z1 IAmZk1n8Rm<Uez_am=?gKI0
+Z2 VOYS4TW87IYgkWkO]3?H?C0
+Z3 dC:\Users\Samuel\Desktop\Lab-Quartus\Divisor_frecuencia\simulation\qsim
+Z4 w1710189079
+Z5 8Divisor_frecuencia.vo
+Z6 FDivisor_frecuencia.vo
+L0 31
+Z7 OV;L;10.1d;51
+r1
+31
+Z8 !s90 -work|work|Divisor_frecuencia.vo|
+Z9 o-work work -O0
+Z10 n@divisor_frecuencia
+!i10b 1
+Z11 !s100 UL^UX7PneY48@LWRRW7nZ1
+!s85 0
+Z12 !s108 1710189080.614000
+Z13 !s107 Divisor_frecuencia.vo|
+!s101 -O0
+vDivisor_frecuencia_vlg_check_tst
+!i10b 1
+Z14 !s100 bJIGgX:ljU@4m7;k8UEo:2
+Z15 Ihbl0T;Y<10Ce_ScoYiWHf2
+Z16 V]YL7mhg9Dhm7_B@@T90KJ2
+R3
+R4
+Z17 8Waveform.vwf.vt
+Z18 FWaveform.vwf.vt
+L0 57
+R7
+r1
+!s85 0
+31
+Z19 !s108 1710189080.659000
+Z20 !s107 Waveform.vwf.vt|
+Z21 !s90 -work|work|Waveform.vwf.vt|
+!s101 -O0
+R9
+Z22 n@divisor_frecuencia_vlg_check_tst
+vDivisor_frecuencia_vlg_sample_tst
+!i10b 1
+Z23 !s100 VoU5iJEEzA1YTZldZIgAM0
+Z24 IXX[EH8?O>1D;gQRk4V1:e1
+Z25 VMbYMZkMMK?[:5m8Ee0hGe0
+R3
+R4
+R17
+R18
+L0 29
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R9
+Z26 n@divisor_frecuencia_vlg_sample_tst
+vDivisor_frecuencia_vlg_vec_tst
+!i10b 1
+Z27 !s100 oHf0^mZf>U@fE=?eOa`MX0
+Z28 IjU4Z5;DSKS2Fk?JQz]I_I1
+Z29 VYGCh8<gAW9jEJWW0_C0303
+R3
+R4
+R17
+R18
+Z30 L0 179
+R7
+r1
+!s85 0
+31
+R19
+R20
+R21
+!s101 -O0
+R9
+Z31 n@divisor_frecuencia_vlg_vec_tst

@@ -1,0 +1,20 @@
+|rom_5x5
+address[0] => Mux0.IN10
+address[0] => Mux1.IN10
+address[0] => Mux2.IN10
+address[1] => Mux0.IN9
+address[1] => Mux1.IN9
+address[1] => Mux2.IN9
+address[2] => Mux0.IN8
+address[2] => Mux1.IN8
+address[2] => Mux2.IN8
+address[2] => data_out[4].DATAIN
+address[2] => data_out[0].DATAIN
+address[3] => ~NO_FANOUT~
+data_out[0] <= address[2].DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= address[2].DB_MAX_OUTPUT_PORT_TYPE
+
+

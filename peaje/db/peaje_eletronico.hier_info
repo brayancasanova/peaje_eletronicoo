@@ -1,0 +1,224 @@
+|peaje_eletronico
+front_sensor => maquina.IN0
+front_sensor => maquina.IN0
+front_sensor => maquina.IN0
+back_sensor => maquina.IN1
+back_sensor => maquina.IN1
+back_sensor => maquina.IN1
+reset => presente~3.DATAIN
+clk => PWM:U5.clk
+clk => PWM:U6.clk
+clk => Divisor_frecuencia:divisor.clk
+clk => presente~1.DATAIN
+pagar_dinero[0] => Mux0.IN36
+pagar_dinero[1] => Mux0.IN35
+pagar_dinero[2] => Mux0.IN34
+pagar_dinero[3] => Mux0.IN33
+pagar_dinero[4] => Mux0.IN32
+semaforo_entrada_verde << semaforo_entrada_verde.DB_MAX_OUTPUT_PORT_TYPE
+semaforo_entrada_rojo << semaforo_entrada_verde.DB_MAX_OUTPUT_PORT_TYPE
+semaforo_salida_verde << semaforo_salida_verde.DB_MAX_OUTPUT_PORT_TYPE
+semaforo_salida_rojo << semaforo_salida_rojo.DB_MAX_OUTPUT_PORT_TYPE
+talanquera_entrada << PWM:U5.PWM
+talanquera_salida << PWM:U6.PWM
+alarma_ruido << alarma_ruido.DB_MAX_OUTPUT_PORT_TYPE
+recibo << recibo.DB_MAX_OUTPUT_PORT_TYPE
+bcd_out1[0] << bcd_a:U2.ABCDEFG[0]
+bcd_out1[1] << bcd_a:U2.ABCDEFG[1]
+bcd_out1[2] << bcd_a:U2.ABCDEFG[2]
+bcd_out1[3] << bcd_a:U2.ABCDEFG[3]
+bcd_out1[4] << bcd_a:U2.ABCDEFG[4]
+bcd_out1[5] << bcd_a:U2.ABCDEFG[5]
+bcd_out1[6] << bcd_a:U2.ABCDEFG[6]
+bcd_out2[0] << bcd_g:U3.ABCDEFG[0]
+bcd_out2[1] << bcd_g:U3.ABCDEFG[1]
+bcd_out2[2] << bcd_g:U3.ABCDEFG[2]
+bcd_out2[3] << bcd_g:U3.ABCDEFG[3]
+bcd_out2[4] << bcd_g:U3.ABCDEFG[4]
+bcd_out2[5] << bcd_g:U3.ABCDEFG[5]
+bcd_out2[6] << bcd_g:U3.ABCDEFG[6]
+bcd_out3[0] << bcd_o:U4.ABCDEFG[0]
+bcd_out3[1] << bcd_o:U4.ABCDEFG[1]
+bcd_out3[2] << bcd_o:U4.ABCDEFG[2]
+bcd_out3[3] << bcd_o:U4.ABCDEFG[3]
+bcd_out3[4] << bcd_o:U4.ABCDEFG[4]
+bcd_out3[5] << bcd_o:U4.ABCDEFG[5]
+bcd_out3[6] << bcd_o:U4.ABCDEFG[6]
+bcd_out[0] << bcd:U1.ABCDEFG[0]
+bcd_out[1] << bcd:U1.ABCDEFG[1]
+bcd_out[2] << bcd:U1.ABCDEFG[2]
+bcd_out[3] << bcd:U1.ABCDEFG[3]
+bcd_out[4] << bcd:U1.ABCDEFG[4]
+bcd_out[5] << bcd:U1.ABCDEFG[5]
+bcd_out[6] << bcd:U1.ABCDEFG[6]
+
+
+|peaje_eletronico|bcd:U1
+IA => ABCDEFG[6].DATAIN
+IA => ABCDEFG[5].DATAIN
+IA => ABCDEFG[2].DATAIN
+IA => ABCDEFG[1].DATAIN
+IA => ABCDEFG[0].DATAIN
+ABCDEFG[0] <= IA.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[1] <= IA.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[2] <= IA.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[3] <= <VCC>
+ABCDEFG[4] <= <VCC>
+ABCDEFG[5] <= IA.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[6] <= IA.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|peaje_eletronico|bcd_a:U2
+IA => ABCDEFG[6].DATAIN
+IA => ABCDEFG[5].DATAIN
+IA => ABCDEFG[4].DATAIN
+IA => ABCDEFG[2].DATAIN
+IA => ABCDEFG[1].DATAIN
+IA => ABCDEFG[0].DATAIN
+ABCDEFG[0] <= IA.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[1] <= IA.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[2] <= IA.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[3] <= <VCC>
+ABCDEFG[4] <= IA.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[5] <= IA.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[6] <= IA.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|peaje_eletronico|bcd_g:U3
+IA => ABCDEFG[6].DATAIN
+IA => ABCDEFG[5].DATAIN
+IA => ABCDEFG[4].DATAIN
+IA => ABCDEFG[3].DATAIN
+IA => ABCDEFG[1].DATAIN
+IA => ABCDEFG[0].DATAIN
+ABCDEFG[0] <= IA.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[1] <= IA.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[2] <= <VCC>
+ABCDEFG[3] <= IA.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[4] <= IA.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[5] <= IA.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[6] <= IA.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|peaje_eletronico|bcd_o:U4
+IA => ABCDEFG[5].DATAIN
+IA => ABCDEFG[4].DATAIN
+IA => ABCDEFG[3].DATAIN
+IA => ABCDEFG[2].DATAIN
+IA => ABCDEFG[1].DATAIN
+IA => ABCDEFG[0].DATAIN
+ABCDEFG[0] <= IA.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[1] <= IA.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[2] <= IA.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[3] <= IA.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[4] <= IA.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[5] <= IA.DB_MAX_OUTPUT_PORT_TYPE
+ABCDEFG[6] <= <VCC>
+
+
+|peaje_eletronico|PWM:U5
+clk => PWM_Count[0].CLK
+clk => PWM_Count[1].CLK
+clk => PWM_Count[2].CLK
+clk => PWM_Count[3].CLK
+clk => PWM_Count[4].CLK
+clk => PWM_Count[5].CLK
+clk => PWM_Count[6].CLK
+clk => PWM_Count[7].CLK
+clk => PWM_Count[8].CLK
+clk => PWM_Count[9].CLK
+clk => PWM_Count[10].CLK
+clk => PWM_Count[11].CLK
+clk => PWM_Count[12].CLK
+clk => PWM_Count[13].CLK
+clk => PWM_Count[14].CLK
+clk => PWM_Count[15].CLK
+clk => PWM_Count[16].CLK
+clk => PWM_Count[17].CLK
+clk => PWM_Count[18].CLK
+selector => PWM.OUTPUTSELECT
+PWM <= PWM.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|peaje_eletronico|PWM:U6
+clk => PWM_Count[0].CLK
+clk => PWM_Count[1].CLK
+clk => PWM_Count[2].CLK
+clk => PWM_Count[3].CLK
+clk => PWM_Count[4].CLK
+clk => PWM_Count[5].CLK
+clk => PWM_Count[6].CLK
+clk => PWM_Count[7].CLK
+clk => PWM_Count[8].CLK
+clk => PWM_Count[9].CLK
+clk => PWM_Count[10].CLK
+clk => PWM_Count[11].CLK
+clk => PWM_Count[12].CLK
+clk => PWM_Count[13].CLK
+clk => PWM_Count[14].CLK
+clk => PWM_Count[15].CLK
+clk => PWM_Count[16].CLK
+clk => PWM_Count[17].CLK
+clk => PWM_Count[18].CLK
+selector => PWM.OUTPUTSELECT
+PWM <= PWM.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|peaje_eletronico|Divisor_frecuencia:divisor
+clk => out2~reg0.CLK
+clk => out1~reg0.CLK
+clk => count2[0].CLK
+clk => count2[1].CLK
+clk => count2[2].CLK
+clk => count2[3].CLK
+clk => count2[4].CLK
+clk => count2[5].CLK
+clk => count2[6].CLK
+clk => count2[7].CLK
+clk => count2[8].CLK
+clk => count2[9].CLK
+clk => count2[10].CLK
+clk => count2[11].CLK
+clk => count2[12].CLK
+clk => count2[13].CLK
+clk => count2[14].CLK
+clk => count2[15].CLK
+clk => count2[16].CLK
+clk => count2[17].CLK
+clk => count2[18].CLK
+clk => count2[19].CLK
+clk => count2[20].CLK
+clk => count2[21].CLK
+clk => count2[22].CLK
+clk => count2[23].CLK
+clk => count2[24].CLK
+clk => count1[0].CLK
+clk => count1[1].CLK
+clk => count1[2].CLK
+clk => count1[3].CLK
+clk => count1[4].CLK
+clk => count1[5].CLK
+clk => count1[6].CLK
+clk => count1[7].CLK
+clk => count1[8].CLK
+clk => count1[9].CLK
+clk => count1[10].CLK
+clk => count1[11].CLK
+clk => count1[12].CLK
+clk => count1[13].CLK
+clk => count1[14].CLK
+clk => count1[15].CLK
+clk => count1[16].CLK
+clk => count1[17].CLK
+clk => count1[18].CLK
+clk => count1[19].CLK
+clk => count1[20].CLK
+clk => count1[21].CLK
+clk => count1[22].CLK
+clk => count1[23].CLK
+clk => count1[24].CLK
+clk => count1[25].CLK
+out1 <= out1~reg0.DB_MAX_OUTPUT_PORT_TYPE
+out2 <= out2~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

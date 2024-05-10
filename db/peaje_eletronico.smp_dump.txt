@@ -1,0 +1,11 @@
+
+State Machine - |peaje_eletronico|presente
+Name presente.alarma presente.intento2 presente.intento1 presente.correcto presente.pagar presente.detectado_salida presente.detectado_entrada presente.inicial 
+presente.inicial 0 0 0 0 0 0 0 0 
+presente.detectado_entrada 0 0 0 0 0 0 1 1 
+presente.detectado_salida 0 0 0 0 0 1 0 1 
+presente.pagar 0 0 0 0 1 0 0 1 
+presente.correcto 0 0 0 1 0 0 0 1 
+presente.intento1 0 0 1 0 0 0 0 1 
+presente.intento2 0 1 0 0 0 0 0 1 
+presente.alarma 1 0 0 0 0 0 0 1 

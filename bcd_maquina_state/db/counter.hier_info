@@ -1,0 +1,9 @@
+|counter
+clk => pr_state~1.DATAIN
+rst => pr_state~3.DATAIN
+count[0] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+count[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+count[2] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+count[3] <= count.DB_MAX_OUTPUT_PORT_TYPE
+
+

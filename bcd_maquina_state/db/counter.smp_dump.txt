@@ -1,0 +1,13 @@
+
+State Machine - |counter|pr_state
+Name pr_state.nine pr_state.eight pr_state.seven pr_state.six pr_state.five pr_state.four pr_state.three pr_state.two pr_state.one pr_state.zero 
+pr_state.zero 0 0 0 0 0 0 0 0 0 0 
+pr_state.one 0 0 0 0 0 0 0 0 1 1 
+pr_state.two 0 0 0 0 0 0 0 1 0 1 
+pr_state.three 0 0 0 0 0 0 1 0 0 1 
+pr_state.four 0 0 0 0 0 1 0 0 0 1 
+pr_state.five 0 0 0 0 1 0 0 0 0 1 
+pr_state.six 0 0 0 1 0 0 0 0 0 1 
+pr_state.seven 0 0 1 0 0 0 0 0 0 1 
+pr_state.eight 0 1 0 0 0 0 0 0 0 1 
+pr_state.nine 1 0 0 0 0 0 0 0 0 1 

@@ -1,0 +1,33 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+entity MUX is
+	port (a : in std_logic;
+			b : in std_logic;
+			c : in std_logic;
+			d : in std_logic;
+			control : in std_logic_vector(2 downto 0);
+			salida : out std_logic);
+end entity;
+
+architecture architecture_MUX of MUX is
+
+begin
+
+sentencia_case :process(a,b,c,d,control)
+begin
+	case control is
+		when "00" =>
+			salida <= a;
+		when "01" =>
+			salida =< b;
+		when "10" =>
+			salida =< c;
+		when "11" =>
+			salida =< d;
+		when others =>
+			salida = <a;
+	end case;
+
+end process sentencia_case;
+end architecture_MUX;

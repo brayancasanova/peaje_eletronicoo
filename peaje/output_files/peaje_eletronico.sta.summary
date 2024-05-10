@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup 'presente.alarma'
+Slack : -2.438
+TNS   : -2.438
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -1.972
+TNS   : -50.687
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : -0.145
+TNS   : -0.145
+
+Type  : Slow 1200mV 85C Model Hold 'presente.alarma'
+Slack : 2.391
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -56.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'presente.alarma'
+Slack : 0.424
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'presente.alarma'
+Slack : -2.146
+TNS   : -2.146
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -1.615
+TNS   : -39.551
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : -0.139
+TNS   : -0.139
+
+Type  : Slow 1200mV 0C Model Hold 'presente.alarma'
+Slack : 2.210
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -56.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'presente.alarma'
+Slack : 0.433
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'presente.alarma'
+Slack : -0.980
+TNS   : -0.980
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : -0.701
+TNS   : -10.337
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : -0.101
+TNS   : -0.101
+
+Type  : Fast 1200mV 0C Model Hold 'presente.alarma'
+Slack : 1.373
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -59.458
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'presente.alarma'
+Slack : 0.460
+TNS   : 0.000
+
+------------------------------------------------------------

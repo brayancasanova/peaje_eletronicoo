@@ -1,0 +1,24 @@
+|PWM
+clk => PWM_Count[0].CLK
+clk => PWM_Count[1].CLK
+clk => PWM_Count[2].CLK
+clk => PWM_Count[3].CLK
+clk => PWM_Count[4].CLK
+clk => PWM_Count[5].CLK
+clk => PWM_Count[6].CLK
+clk => PWM_Count[7].CLK
+clk => PWM_Count[8].CLK
+clk => PWM_Count[9].CLK
+clk => PWM_Count[10].CLK
+clk => PWM_Count[11].CLK
+clk => PWM_Count[12].CLK
+clk => PWM_Count[13].CLK
+clk => PWM_Count[14].CLK
+clk => PWM_Count[15].CLK
+clk => PWM_Count[16].CLK
+clk => PWM_Count[17].CLK
+clk => PWM_Count[18].CLK
+selector => PWM.OUTPUTSELECT
+PWM <= PWM.DB_MAX_OUTPUT_PORT_TYPE
+
+
