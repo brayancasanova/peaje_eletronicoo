@@ -1,5 +1,5 @@
 Analysis & Synthesis report for peaje_eletronico
-Thu May 09 18:03:05 2024
+Thu May 16 19:17:04 2024
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -20,9 +20,12 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
  12. Inverted Register Statistics
  13. Parameter Settings for User Entity Instance: PWM:U5
  14. Parameter Settings for User Entity Instance: PWM:U6
- 15. Port Connectivity Checks: "Divisor_frecuencia:divisor"
- 16. Elapsed Time Per Partition
- 17. Analysis & Synthesis Messages
+ 15. Parameter Settings for Inferred Entity Instance: Conversor:U8|lpm_divide:Mod0
+ 16. Port Connectivity Checks: "Divisor_frecuencia:divisor"
+ 17. Port Connectivity Checks: "Conversor:U8"
+ 18. Port Connectivity Checks: "Contador_tiempo:U7"
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -48,7 +51,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu May 09 18:03:05 2024      ;
+; Analysis & Synthesis Status        ; Successful - Thu May 16 19:17:04 2024      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; peaje_eletronico                           ;
 ; Top-level Entity Name              ; peaje_eletronico                           ;
@@ -57,7 +60,7 @@ applicable agreement for further details.
 ;     Total combinational functions  ; 95                                         ;
 ;     Dedicated logic registers      ; 53                                         ;
 ; Total registers                    ; 53                                         ;
-; Total pins                         ; 45                                         ;
+; Total pins                         ; 59                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 0                                          ;
 ; Embedded Multiplier 9-bit elements ; 0                                          ;
@@ -169,21 +172,33 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                             ;
-+-----------------------------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path                                ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                       ; Library ;
-+-----------------------------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------+---------+
-; ../PWM/PWM.vhd                                                  ; yes             ; User VHDL File  ; C:/Users/Usuario/OneDrive/Escritorio/peaje_eletronico/PWM/PWM.vhd                                                  ;         ;
-; ../bcd/bcd_o/bcd_o.vhd                                          ; yes             ; User VHDL File  ; C:/Users/Usuario/OneDrive/Escritorio/peaje_eletronico/bcd/bcd_o/bcd_o.vhd                                          ;         ;
-; ../Divisor_frecuencia/Divisor_frecuencia/Divisor_frecuencia.vhd ; yes             ; User VHDL File  ; C:/Users/Usuario/OneDrive/Escritorio/peaje_eletronico/Divisor_frecuencia/Divisor_frecuencia/Divisor_frecuencia.vhd ;         ;
-; ../bcd/bcd_g/bcd_g.vhd                                          ; yes             ; User VHDL File  ; C:/Users/Usuario/OneDrive/Escritorio/peaje_eletronico/bcd/bcd_g/bcd_g.vhd                                          ;         ;
-; ../bcd/bcd_a/bcd_a.vhd                                          ; yes             ; User VHDL File  ; C:/Users/Usuario/OneDrive/Escritorio/peaje_eletronico/bcd/bcd_a/bcd_a.vhd                                          ;         ;
-; ../bcd/bcd.vhd                                                  ; yes             ; User VHDL File  ; C:/Users/Usuario/OneDrive/Escritorio/peaje_eletronico/bcd/bcd.vhd                                                  ;         ;
-; ../funcion_rom/my_package.vhd                                   ; yes             ; User VHDL File  ; C:/Users/Usuario/OneDrive/Escritorio/peaje_eletronico/funcion_rom/my_package.vhd                                   ;         ;
-; ../funcion/my_package.vhd                                       ; yes             ; User VHDL File  ; C:/Users/Usuario/OneDrive/Escritorio/peaje_eletronico/funcion/my_package.vhd                                       ;         ;
-; peaje_eletronico.vhd                                            ; yes             ; User VHDL File  ; C:/Users/Usuario/OneDrive/Escritorio/peaje_eletronico/peaje/peaje_eletronico.vhd                                   ;         ;
-+-----------------------------------------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                          ;
++-----------------------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                       ; Library ;
++-----------------------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------+---------+
+; ../BCD7seg/BCD7seg.vhd                                          ; yes             ; User VHDL File               ; C:/Users/Usuario/OneDrive/Escritorio/peaje_eletronico/BCD7seg/BCD7seg.vhd                                          ;         ;
+; ../conversor/conversor.vhd                                      ; yes             ; User VHDL File               ; C:/Users/Usuario/OneDrive/Escritorio/peaje_eletronico/conversor/conversor.vhd                                      ;         ;
+; ../contador de tiempo/Contador_tiempo.vhd                       ; yes             ; User VHDL File               ; C:/Users/Usuario/OneDrive/Escritorio/peaje_eletronico/contador de tiempo/Contador_tiempo.vhd                       ;         ;
+; ../PWM/PWM.vhd                                                  ; yes             ; User VHDL File               ; C:/Users/Usuario/OneDrive/Escritorio/peaje_eletronico/PWM/PWM.vhd                                                  ;         ;
+; ../bcd/bcd_o/bcd_o.vhd                                          ; yes             ; User VHDL File               ; C:/Users/Usuario/OneDrive/Escritorio/peaje_eletronico/bcd/bcd_o/bcd_o.vhd                                          ;         ;
+; ../Divisor_frecuencia/Divisor_frecuencia/Divisor_frecuencia.vhd ; yes             ; User VHDL File               ; C:/Users/Usuario/OneDrive/Escritorio/peaje_eletronico/Divisor_frecuencia/Divisor_frecuencia/Divisor_frecuencia.vhd ;         ;
+; ../bcd/bcd_g/bcd_g.vhd                                          ; yes             ; User VHDL File               ; C:/Users/Usuario/OneDrive/Escritorio/peaje_eletronico/bcd/bcd_g/bcd_g.vhd                                          ;         ;
+; ../bcd/bcd_a/bcd_a.vhd                                          ; yes             ; User VHDL File               ; C:/Users/Usuario/OneDrive/Escritorio/peaje_eletronico/bcd/bcd_a/bcd_a.vhd                                          ;         ;
+; ../bcd/bcd.vhd                                                  ; yes             ; User VHDL File               ; C:/Users/Usuario/OneDrive/Escritorio/peaje_eletronico/bcd/bcd.vhd                                                  ;         ;
+; ../funcion_rom/my_package.vhd                                   ; yes             ; User VHDL File               ; C:/Users/Usuario/OneDrive/Escritorio/peaje_eletronico/funcion_rom/my_package.vhd                                   ;         ;
+; ../funcion/my_package.vhd                                       ; yes             ; User VHDL File               ; C:/Users/Usuario/OneDrive/Escritorio/peaje_eletronico/funcion/my_package.vhd                                       ;         ;
+; peaje_eletronico.vhd                                            ; yes             ; User VHDL File               ; C:/Users/Usuario/OneDrive/Escritorio/peaje_eletronico/peaje/peaje_eletronico.vhd                                   ;         ;
+; lpm_divide.tdf                                                  ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/lpm_divide.tdf                                                      ;         ;
+; abs_divider.inc                                                 ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/abs_divider.inc                                                     ;         ;
+; sign_div_unsign.inc                                             ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/sign_div_unsign.inc                                                 ;         ;
+; aglobal131.inc                                                  ; yes             ; Megafunction                 ; c:/altera/13.1/quartus/libraries/megafunctions/aglobal131.inc                                                      ;         ;
+; db/lpm_divide_b8m.tdf                                           ; yes             ; Auto-Generated Megafunction  ; C:/Users/Usuario/OneDrive/Escritorio/peaje_eletronico/peaje/db/lpm_divide_b8m.tdf                                  ;         ;
+; db/sign_div_unsign_9kh.tdf                                      ; yes             ; Auto-Generated Megafunction  ; C:/Users/Usuario/OneDrive/Escritorio/peaje_eletronico/peaje/db/sign_div_unsign_9kh.tdf                             ;         ;
+; db/alt_u_div_t2f.tdf                                            ; yes             ; Auto-Generated Megafunction  ; C:/Users/Usuario/OneDrive/Escritorio/peaje_eletronico/peaje/db/alt_u_div_t2f.tdf                                   ;         ;
+; db/add_sub_unc.tdf                                              ; yes             ; Auto-Generated Megafunction  ; C:/Users/Usuario/OneDrive/Escritorio/peaje_eletronico/peaje/db/add_sub_unc.tdf                                     ;         ;
+; db/add_sub_vnc.tdf                                              ; yes             ; Auto-Generated Megafunction  ; C:/Users/Usuario/OneDrive/Escritorio/peaje_eletronico/peaje/db/add_sub_vnc.tdf                                     ;         ;
++-----------------------------------------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -207,12 +222,12 @@ applicable agreement for further details.
 ;     -- Dedicated logic registers            ; 53        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 45        ;
+; I/O pins                                    ; 59        ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 53        ;
-; Total fan-out                               ; 441       ;
-; Average fan-out                             ; 1.85      ;
+; Total fan-out                               ; 455       ;
+; Average fan-out                             ; 1.71      ;
 +---------------------------------------------+-----------+
 
 
@@ -221,7 +236,7 @@ applicable agreement for further details.
 +---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+--------------+
 ; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                          ; Library Name ;
 +---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+--------------+
-; |peaje_eletronico               ; 95 (16)           ; 53 (8)       ; 0           ; 0            ; 0       ; 0         ; 45   ; 0            ; |peaje_eletronico                            ; work         ;
+; |peaje_eletronico               ; 95 (16)           ; 53 (8)       ; 0           ; 0            ; 0       ; 0         ; 59   ; 0            ; |peaje_eletronico                            ; work         ;
 ;    |Divisor_frecuencia:divisor| ; 47 (47)           ; 26 (26)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |peaje_eletronico|Divisor_frecuencia:divisor ; work         ;
 ;    |PWM:U5|                     ; 31 (31)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |peaje_eletronico|PWM:U5                     ; work         ;
 ;    |PWM:U6|                     ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |peaje_eletronico|PWM:U6                     ; work         ;
@@ -257,32 +272,33 @@ Encoding Type:  One-Hot
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+---------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                        ;
-+----------------------------------------+----------------------------------+
-; Register name                          ; Reason for Removal               ;
-+----------------------------------------+----------------------------------+
-; PWM:U6|PWM_Count[18]                   ; Merged with PWM:U5|PWM_Count[18] ;
-; PWM:U6|PWM_Count[17]                   ; Merged with PWM:U5|PWM_Count[17] ;
-; PWM:U6|PWM_Count[16]                   ; Merged with PWM:U5|PWM_Count[16] ;
-; PWM:U6|PWM_Count[15]                   ; Merged with PWM:U5|PWM_Count[15] ;
-; PWM:U6|PWM_Count[14]                   ; Merged with PWM:U5|PWM_Count[14] ;
-; PWM:U6|PWM_Count[13]                   ; Merged with PWM:U5|PWM_Count[13] ;
-; PWM:U6|PWM_Count[12]                   ; Merged with PWM:U5|PWM_Count[12] ;
-; PWM:U6|PWM_Count[11]                   ; Merged with PWM:U5|PWM_Count[11] ;
-; PWM:U6|PWM_Count[10]                   ; Merged with PWM:U5|PWM_Count[10] ;
-; PWM:U6|PWM_Count[9]                    ; Merged with PWM:U5|PWM_Count[9]  ;
-; PWM:U6|PWM_Count[8]                    ; Merged with PWM:U5|PWM_Count[8]  ;
-; PWM:U6|PWM_Count[7]                    ; Merged with PWM:U5|PWM_Count[7]  ;
-; PWM:U6|PWM_Count[6]                    ; Merged with PWM:U5|PWM_Count[6]  ;
-; PWM:U6|PWM_Count[5]                    ; Merged with PWM:U5|PWM_Count[5]  ;
-; PWM:U6|PWM_Count[4]                    ; Merged with PWM:U5|PWM_Count[4]  ;
-; PWM:U6|PWM_Count[3]                    ; Merged with PWM:U5|PWM_Count[3]  ;
-; PWM:U6|PWM_Count[2]                    ; Merged with PWM:U5|PWM_Count[2]  ;
-; PWM:U6|PWM_Count[1]                    ; Merged with PWM:U5|PWM_Count[1]  ;
-; PWM:U6|PWM_Count[0]                    ; Merged with PWM:U5|PWM_Count[0]  ;
-; Total Number of Removed Registers = 19 ;                                  ;
-+----------------------------------------+----------------------------------+
++--------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                   ;
++----------------------------------------+---------------------------------------------+
+; Register name                          ; Reason for Removal                          ;
++----------------------------------------+---------------------------------------------+
+; PWM:U6|PWM_Count[18]                   ; Merged with PWM:U5|PWM_Count[18]            ;
+; PWM:U6|PWM_Count[17]                   ; Merged with PWM:U5|PWM_Count[17]            ;
+; PWM:U6|PWM_Count[16]                   ; Merged with PWM:U5|PWM_Count[16]            ;
+; PWM:U6|PWM_Count[15]                   ; Merged with PWM:U5|PWM_Count[15]            ;
+; PWM:U6|PWM_Count[14]                   ; Merged with PWM:U5|PWM_Count[14]            ;
+; PWM:U6|PWM_Count[13]                   ; Merged with PWM:U5|PWM_Count[13]            ;
+; PWM:U6|PWM_Count[12]                   ; Merged with PWM:U5|PWM_Count[12]            ;
+; PWM:U6|PWM_Count[11]                   ; Merged with PWM:U5|PWM_Count[11]            ;
+; PWM:U6|PWM_Count[10]                   ; Merged with PWM:U5|PWM_Count[10]            ;
+; PWM:U6|PWM_Count[9]                    ; Merged with PWM:U5|PWM_Count[9]             ;
+; PWM:U6|PWM_Count[8]                    ; Merged with PWM:U5|PWM_Count[8]             ;
+; PWM:U6|PWM_Count[7]                    ; Merged with PWM:U5|PWM_Count[7]             ;
+; PWM:U6|PWM_Count[6]                    ; Merged with PWM:U5|PWM_Count[6]             ;
+; PWM:U6|PWM_Count[5]                    ; Merged with PWM:U5|PWM_Count[5]             ;
+; PWM:U6|PWM_Count[4]                    ; Merged with PWM:U5|PWM_Count[4]             ;
+; PWM:U6|PWM_Count[3]                    ; Merged with PWM:U5|PWM_Count[3]             ;
+; PWM:U6|PWM_Count[2]                    ; Merged with PWM:U5|PWM_Count[2]             ;
+; PWM:U6|PWM_Count[1]                    ; Merged with PWM:U5|PWM_Count[1]             ;
+; PWM:U6|PWM_Count[0]                    ; Merged with PWM:U5|PWM_Count[0]             ;
+; Contador_tiempo:U7|cnt[0..4]           ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 24 ;                                             ;
++----------------------------------------+---------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -330,6 +346,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: Conversor:U8|lpm_divide:Mod0 ;
++------------------------+----------------+-------------------------------------+
+; Parameter Name         ; Value          ; Type                                ;
++------------------------+----------------+-------------------------------------+
+; LPM_WIDTHN             ; 5              ; Untyped                             ;
+; LPM_WIDTHD             ; 5              ; Untyped                             ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                             ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                             ;
+; LPM_PIPELINE           ; 0              ; Untyped                             ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                             ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                             ;
+; CBXI_PARAMETER         ; lpm_divide_b8m ; Untyped                             ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                             ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                             ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                          ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                        ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                        ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                      ;
++------------------------+----------------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +----------------------------------------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "Divisor_frecuencia:divisor"                                                         ;
 +------+--------+----------+-------------------------------------------------------------------------------------+
@@ -339,12 +378,33 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
++--------------------------------------------------------------------+
+; Port Connectivity Checks: "Conversor:U8"                           ;
++---------------+--------+------------------+------------------------+
+; Port          ; Type   ; Severity         ; Details                ;
++---------------+--------+------------------+------------------------+
+; sum_con       ; Input  ; Critical Warning ; Types are incompatible ;
+; sum_con[4..3] ; Input  ; Info             ; Stuck at GND           ;
+; dec           ; Output ; Critical Warning ; Types are incompatible ;
+; uni           ; Output ; Critical Warning ; Types are incompatible ;
++---------------+--------+------------------+------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Contador_tiempo:U7"                                                                   ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                             ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+; minsal ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------+--------+----------+-------------------------------------------------------------------------------------+
+
+
 +-------------------------------+
 ; Elapsed Time Per Partition    ;
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -354,9 +414,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Thu May 09 18:03:02 2024
+    Info: Processing started: Thu May 16 19:16:58 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off peaje_eletronico -c peaje_eletronico
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
+Info (12021): Found 2 design units, including 1 entities, in source file /users/usuario/onedrive/escritorio/peaje_eletronico/bcd_maquina_state/counter.vhd
+    Info (12022): Found design unit 1: counter-state_machine
+    Info (12023): Found entity 1: counter
+Info (12021): Found 2 design units, including 1 entities, in source file /users/usuario/onedrive/escritorio/peaje_eletronico/bcd7seg/bcd7seg.vhd
+    Info (12022): Found design unit 1: BCD7Seg-BCD7Seg_Arch
+    Info (12023): Found entity 1: BCD7Seg
+Info (12021): Found 2 design units, including 1 entities, in source file /users/usuario/onedrive/escritorio/peaje_eletronico/conversor/conversor.vhd
+    Info (12022): Found design unit 1: Conversor-arch_Conversor
+    Info (12023): Found entity 1: Conversor
+Info (12021): Found 2 design units, including 1 entities, in source file /users/usuario/onedrive/escritorio/peaje_eletronico/contador de tiempo/contador_tiempo.vhd
+    Info (12022): Found design unit 1: Contador_tiempo-arch_Contador_tiempo
+    Info (12023): Found entity 1: Contador_tiempo
 Info (12021): Found 2 design units, including 1 entities, in source file /users/usuario/onedrive/escritorio/peaje_eletronico/pwm/pwm.vhd
     Info (12022): Found design unit 1: PWM-PWM
     Info (12023): Found entity 1: PWM
@@ -386,7 +458,6 @@ Warning (12019): Can't analyze file -- file ../peaje_eletronico/bcd/bcd_a/bcd_a.
 Warning (12019): Can't analyze file -- file ../peaje_eletronico/bcd/bcd.vhd is missing
 Warning (12019): Can't analyze file -- file ../peaje_eletronico/rom/rom_5x5.vhd is missing
 Warning (12019): Can't analyze file -- file ../peaje_eletronico/mux/MUX.vhd is missing
-Warning (12019): Can't analyze file -- file ../peaje_eletronico/bcd_maquina_state/counter.vhd is missing
 Warning (12019): Can't analyze file -- file ../peaje_eletronico/funcion_rom/my_package.vhd is missing
 Warning (12019): Can't analyze file -- file ../peaje_eletronico/funcion/my_package.vhd is missing
 Warning (12019): Can't analyze file -- file ../peaje_eletronico/Divisor_frecuencia/Divisor_frecuencia/Divisor_frecuencia.vhd is missing
@@ -394,22 +465,59 @@ Info (12021): Found 2 design units, including 1 entities, in source file peaje_e
     Info (12022): Found design unit 1: peaje_eletronico-descripcion
     Info (12023): Found entity 1: peaje_eletronico
 Info (12127): Elaborating entity "peaje_eletronico" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at peaje_eletronico.vhd(38): object "clk1" assigned a value but never read
-Warning (10492): VHDL Process Statement warning at peaje_eletronico.vhd(253): signal "clk2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at peaje_eletronico.vhd(199): inferring latch(es) for signal or variable "stalanquera_salida", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "stalanquera_salida" at peaje_eletronico.vhd(199)
+Warning (10036): Verilog HDL or VHDL warning at peaje_eletronico.vhd(41): object "clk1" assigned a value but never read
+Warning (10036): Verilog HDL or VHDL warning at peaje_eletronico.vhd(58): object "sminsal" assigned a value but never read
+Warning (10492): VHDL Process Statement warning at peaje_eletronico.vhd(325): signal "clk2" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10631): VHDL Process Statement warning at peaje_eletronico.vhd(265): inferring latch(es) for signal or variable "stalanquera_salida", which holds its previous value in one or more paths through the process
+Info (10041): Inferred latch for "stalanquera_salida" at peaje_eletronico.vhd(265)
 Info (12128): Elaborating entity "bcd" for hierarchy "bcd:U1"
 Info (12128): Elaborating entity "bcd_a" for hierarchy "bcd_a:U2"
 Info (12128): Elaborating entity "bcd_g" for hierarchy "bcd_g:U3"
 Info (12128): Elaborating entity "bcd_o" for hierarchy "bcd_o:U4"
 Info (12128): Elaborating entity "PWM" for hierarchy "PWM:U5"
+Info (12128): Elaborating entity "Contador_tiempo" for hierarchy "Contador_tiempo:U7"
+Info (12128): Elaborating entity "Conversor" for hierarchy "Conversor:U8"
+Info (12128): Elaborating entity "BCD7Seg" for hierarchy "BCD7Seg:U9"
 Info (12128): Elaborating entity "Divisor_frecuencia" for hierarchy "Divisor_frecuencia:divisor"
+Info (278001): Inferred 1 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "Conversor:U8|Mod0"
+Info (12130): Elaborated megafunction instantiation "Conversor:U8|lpm_divide:Mod0"
+Info (12133): Instantiated megafunction "Conversor:U8|lpm_divide:Mod0" with the following parameter:
+    Info (12134): Parameter "LPM_WIDTHN" = "5"
+    Info (12134): Parameter "LPM_WIDTHD" = "5"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_b8m.tdf
+    Info (12023): Found entity 1: lpm_divide_b8m
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_9kh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_9kh
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_t2f.tdf
+    Info (12023): Found entity 1: alt_u_div_t2f
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_unc.tdf
+    Info (12023): Found entity 1: add_sub_unc
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_vnc.tdf
+    Info (12023): Found entity 1: add_sub_vnc
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "bcd_out1[3]" is stuck at VCC
     Warning (13410): Pin "bcd_out2[2]" is stuck at VCC
     Warning (13410): Pin "bcd_out3[6]" is stuck at VCC
     Warning (13410): Pin "bcd_out[3]" is stuck at VCC
     Warning (13410): Pin "bcd_out[4]" is stuck at VCC
+    Warning (13410): Pin "bcd_salida1[0]" is stuck at VCC
+    Warning (13410): Pin "bcd_salida1[1]" is stuck at GND
+    Warning (13410): Pin "bcd_salida1[2]" is stuck at GND
+    Warning (13410): Pin "bcd_salida1[3]" is stuck at GND
+    Warning (13410): Pin "bcd_salida1[4]" is stuck at GND
+    Warning (13410): Pin "bcd_salida1[5]" is stuck at GND
+    Warning (13410): Pin "bcd_salida1[6]" is stuck at GND
+    Warning (13410): Pin "bcd_salida2[0]" is stuck at VCC
+    Warning (13410): Pin "bcd_salida2[1]" is stuck at GND
+    Warning (13410): Pin "bcd_salida2[2]" is stuck at GND
+    Warning (13410): Pin "bcd_salida2[3]" is stuck at GND
+    Warning (13410): Pin "bcd_salida2[4]" is stuck at GND
+    Warning (13410): Pin "bcd_salida2[5]" is stuck at GND
+    Warning (13410): Pin "bcd_salida2[6]" is stuck at GND
 Info (286030): Timing-Driven Synthesis is running
 Warning (20013): Ignored assignments for entity "DE0_Default" -- entity does not exist in design
     Warning (20014): Assignment for entity set_global_assignment -name LL_ROOT_REGION ON -entity DE0_Default -section_id "Root Region" was ignored
@@ -490,14 +598,14 @@ Warning (20013): Ignored assignments for entity "Lab3b" -- entity does not exist
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity Lab3b -section_id Top was ignored
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 140 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 154 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 36 output pins
+    Info (21059): Implemented 50 output pins
     Info (21061): Implemented 95 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 95 warnings
-    Info: Peak virtual memory: 4659 megabytes
-    Info: Processing ended: Thu May 09 18:03:05 2024
-    Info: Elapsed time: 00:00:03
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 110 warnings
+    Info: Peak virtual memory: 4678 megabytes
+    Info: Processing ended: Thu May 16 19:17:04 2024
+    Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:01
 
 

@@ -1,5 +1,6 @@
 <?xml version="1.0" ?>
 <LOG_ROOT>
 	<PROJECT NAME="peaje_eletronico">
+		<CBX_INST_ENTRY INSTANCE_NAME="|peaje_eletronico|Conversor:U8|lpm_divide:Mod0" CBX_FILE_NAME="lpm_divide_b8m.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

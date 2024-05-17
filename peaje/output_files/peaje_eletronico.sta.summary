@@ -3,19 +3,19 @@ TimeQuest Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'presente.alarma'
-Slack : -2.438
-TNS   : -2.438
+Slack : -2.519
+TNS   : -2.519
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -1.972
-TNS   : -50.687
+Slack : -2.014
+TNS   : -51.404
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : -0.145
-TNS   : -0.145
+Slack : 0.032
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'presente.alarma'
-Slack : 2.391
+Slack : 2.302
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
@@ -23,23 +23,23 @@ Slack : -3.000
 TNS   : -56.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'presente.alarma'
-Slack : 0.424
+Slack : 0.417
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'presente.alarma'
-Slack : -2.146
-TNS   : -2.146
+Slack : -2.197
+TNS   : -2.197
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -1.615
-TNS   : -39.551
+Slack : -1.747
+TNS   : -40.633
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : -0.139
-TNS   : -0.139
+Slack : 0.020
+TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'presente.alarma'
-Slack : 2.210
+Slack : 2.129
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -47,31 +47,31 @@ Slack : -3.000
 TNS   : -56.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'presente.alarma'
-Slack : 0.433
+Slack : 0.430
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'presente.alarma'
-Slack : -0.980
-TNS   : -0.980
+Slack : -1.027
+TNS   : -1.027
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -0.701
-TNS   : -10.337
+Slack : -0.702
+TNS   : -10.671
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : -0.101
-TNS   : -0.101
+Slack : -0.026
+TNS   : -0.026
 
 Type  : Fast 1200mV 0C Model Hold 'presente.alarma'
-Slack : 1.373
+Slack : 1.329
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
 Slack : -3.000
-TNS   : -59.458
+TNS   : -59.455
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'presente.alarma'
-Slack : 0.460
+Slack : 0.450
 TNS   : 0.000
 
 ------------------------------------------------------------
